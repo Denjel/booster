@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
+
 import com.didiglobal.booster.instrument.ShadowExecutors;
 
 import java.util.ArrayList;
@@ -38,6 +40,7 @@ public final class BoosterSharedPreferences implements SharedPreferences {
     private Map<String, Object> mKeyValueMap = new ConcurrentHashMap<>();
 
     private BoosterSharedPreferences(final Context context, final String name) {
+        Log.d("BoosterSharedPreferences", "BoosterSharedPreferences: " + name);
         mWriteExecutor = ShadowExecutors.newOptimizedSingleThreadExecutor(name);
         mManager = new SharedPreferencesManager(context, name);
         startLoadFromDisk();
