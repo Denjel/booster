@@ -4,6 +4,7 @@ import com.android.build.gradle.AppExtension
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.LibraryExtension
 import com.android.build.gradle.api.BaseVariant
+import com.android.ddmlib.Log
 import com.didiglobal.booster.task.spi.VariantProcessor
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
@@ -17,6 +18,7 @@ import org.gradle.api.Project
 class BoosterPlugin : Plugin<Project> {
 
     override fun apply(project: Project) {
+        Log.d("Booster", "plugin is applied to ${project.path}")
         project.extensions.findByName("android") ?: throw GradleException("$project is not an Android project")
 
         if (!GTE_V3_6) {
