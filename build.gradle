@@ -28,7 +28,7 @@ allprojects { project ->
     apply plugin: 'java'
     apply plugin: 'maven-publish'
 
-    group = 'com.github.denjel.booster'
+    group = 'com.didiglobal.booster'
     version = findProperty('version').with { it != DEFAULT_VERSION ? it : null } ?: '1.0.0-SNAPSHOT'
 
     repositories {
