@@ -80,13 +80,13 @@ allprojects { project ->
 
         pom {
             name = project.name
-            url = 'https://github.com/didi/booster'
+            url = 'https://github.com/Denjel/booster'
             description = project.description ?: project.name
 
             scm {
-                connection = 'scm:git:git://github.com/didi/booster.git'
-                developerConnection = 'scm:git:git@github.com:didi/booster.git'
-                url = 'https://github.com/didi/booster'
+                connection = 'scm:git:git://github.com/Denjel/booster.git'
+                developerConnection = 'scm:git:git@github.com:Denjel/booster.git'
+                url = 'https://github.com/Denjel/booster'
             }
 
             licenses {
@@ -118,13 +118,13 @@ allprojects { project ->
         }
 
 
-        if (!project.hasProperty("signing.skip")) {
+        /*if (!project.hasProperty("signing.skip")) {
             apply plugin: 'signing'
 
             project.signing {
                 sign publication
             }
-        }
+        }*/
     }
 
     project.afterEvaluate {
@@ -147,7 +147,7 @@ subprojects { project ->
 dependencies {
     implementation project(':booster-gradle-plugin')
 }
-
+/*
 nexusPublishing {
     packageGroup = "com.didiglobal"
 
@@ -166,4 +166,4 @@ nexusPublishing {
         maxRetries.set(3000)
         delayBetween.set(Duration.ofMillis(3000))
     }
-}
+}*/
