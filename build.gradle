@@ -22,7 +22,6 @@ def OSSRH_PASSWORD = project.properties['OSSRH_PASSWORD'] ?: System.getenv('OSSR
 def OSSRH_STAGING_PROFILE_ID = project.properties['OSSRH_STAGING_PROFILE_ID'] ?: System.getenv('OSSRH_STAGING_PROFILE_ID')
 
 apply plugin: 'org.jetbrains.dokka'
-apply plugin: 'io.github.gradle-nexus.publish-plugin'
 
 allprojects { project ->
     apply plugin: 'java'
