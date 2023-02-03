@@ -15,7 +15,7 @@ apply plugin: 'java-gradle-plugin'
 gradlePlugin {
     plugins {
         boosterPlugin {
-            id = 'com.github.denjel.booster'
+            id = 'com.didiglobal.booster'
             displayName = "${id}.gradle.plugin"
             description = project.description ?: project.name
             implementationClass = 'com.didiglobal.booster.gradle.BoosterPlugin'

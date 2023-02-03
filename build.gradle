@@ -27,8 +27,8 @@ allprojects { project ->
     apply plugin: 'java'
     apply plugin: 'maven-publish'
 
-    group = 'com.github.denjel'
-    version = '0.0.1'
+    group = 'com.didiglobal.booster'
+    version = '0.0.2'
 
     repositories {
         mavenLocal()
