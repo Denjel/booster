@@ -27,7 +27,7 @@ allprojects { project ->
     apply plugin: 'java'
     apply plugin: 'maven-publish'
 
-    group = 'com.github.denjel.booster'
+    group = 'com.github.denjel'
     version = findProperty('version').with { it != DEFAULT_VERSION ? it : null } ?: '1.0.0-SNAPSHOT'
 
     repositories {
@@ -79,13 +79,13 @@ allprojects { project ->
 
         pom {
             name = project.name
-            url = 'https://github.com/Denjel/booster'
+            url = 'https://github.com/denjel/booster'
             description = project.description ?: project.name
 
             scm {
-                connection = 'scm:git:git://github.com/Denjel/booster.git'
-                developerConnection = 'scm:git:git@github.com:Denjel/booster.git'
-                url = 'https://github.com/Denjel/booster'
+                connection = 'scm:git:git://github.com/denjel/booster.git'
+                developerConnection = 'scm:git:git@github.com:denjel/booster.git'
+                url = 'https://github.com/denjel/booster'
             }
 
             licenses {
