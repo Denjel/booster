@@ -28,7 +28,7 @@ allprojects { project ->
     apply plugin: 'maven-publish'
 
     group = 'com.github.denjel'
-    version = findProperty('version').with { it != DEFAULT_VERSION ? it : null } ?: '1.0.0-SNAPSHOT'
+    version = '0.0.1'
 
     repositories {
         mavenLocal()
